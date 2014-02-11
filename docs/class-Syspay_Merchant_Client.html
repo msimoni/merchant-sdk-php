@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Syspay_Merchant_Client | Syspay Merchant SDK</title>
+
+	<script type="text/javascript" src="resources/combined.js?2446083936"></script>
+	<script type="text/javascript" src="elementlist.js?4249124626"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Syspay_Merchant_BillingAgreementCancellationRequest.html">Syspay_Merchant_BillingAgreementCancellationRequest</a></li>
+				<li><a href="class-Syspay_Merchant_BillingAgreementInfoRequest.html">Syspay_Merchant_BillingAgreementInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_BillingAgreementListRequest.html">Syspay_Merchant_BillingAgreementListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_ChargebackInfoRequest.html">Syspay_Merchant_ChargebackInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_ChargebackListRequest.html">Syspay_Merchant_ChargebackListRequest</a></li>
+				<li class="active"><a href="class-Syspay_Merchant_Client.html">Syspay_Merchant_Client</a></li>
+				<li><a href="class-Syspay_Merchant_ConfirmRequest.html">Syspay_Merchant_ConfirmRequest</a></li>
+				<li><a href="class-Syspay_Merchant_EMS.html">Syspay_Merchant_EMS</a></li>
+				<li><a href="class-Syspay_Merchant_Entity.html">Syspay_Merchant_Entity</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_BillingAgreement.html">Syspay_Merchant_Entity_BillingAgreement</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Chargeback.html">Syspay_Merchant_Entity_Chargeback</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Creditcard.html">Syspay_Merchant_Entity_Creditcard</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Customer.html">Syspay_Merchant_Entity_Customer</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Payment.html">Syspay_Merchant_Entity_Payment</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_PaymentMethod.html">Syspay_Merchant_Entity_PaymentMethod</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_PaymentRecipient.html">Syspay_Merchant_Entity_PaymentRecipient</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Plan.html">Syspay_Merchant_Entity_Plan</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Refund.html">Syspay_Merchant_Entity_Refund</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Subscription.html">Syspay_Merchant_Entity_Subscription</a></li>
+				<li><a href="class-Syspay_Merchant_IpAddressesRequest.html">Syspay_Merchant_IpAddressesRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PaymentInfoRequest.html">Syspay_Merchant_PaymentInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PaymentListRequest.html">Syspay_Merchant_PaymentListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PaymentRequest.html">Syspay_Merchant_PaymentRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PlanInfoRequest.html">Syspay_Merchant_PlanInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PlanRequest.html">Syspay_Merchant_PlanRequest</a></li>
+				<li><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Redirect.html">Syspay_Merchant_Redirect</a></li>
+				<li><a href="class-Syspay_Merchant_RefundInfoRequest.html">Syspay_Merchant_RefundInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_RefundListRequest.html">Syspay_Merchant_RefundListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_RefundRequest.html">Syspay_Merchant_RefundRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Request.html">Syspay_Merchant_Request</a></li>
+				<li><a href="class-Syspay_Merchant_SubscriptionCancellationRequest.html">Syspay_Merchant_SubscriptionCancellationRequest</a></li>
+				<li><a href="class-Syspay_Merchant_SubscriptionInfoRequest.html">Syspay_Merchant_SubscriptionInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_SubscriptionRequest.html">Syspay_Merchant_SubscriptionRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Utils.html">Syspay_Merchant_Utils</a></li>
+				<li><a href="class-Syspay_Merchant_VoidRequest.html">Syspay_Merchant_VoidRequest</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Syspay_Merchant_EMSException.html">Syspay_Merchant_EMSException</a></li>
+				<li><a href="class-Syspay_Merchant_RedirectException.html">Syspay_Merchant_RedirectException</a></li>
+				<li><a href="class-Syspay_Merchant_RequestException.html">Syspay_Merchant_RequestException</a></li>
+				<li><a href="class-Syspay_Merchant_UnexpectedResponseException.html">Syspay_Merchant_UnexpectedResponseException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Syspay_Merchant_Client</h1>
+
+
+	<div class="description">
+	
+<p>Base API client</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>See:</b>
+				<a
+href="https://app.syspay.com/bundles/emiuser/doc/merchant_api.html#emerchant-rest-api">https://app.syspay.com/bundles/emiuser/doc/merchant_api.html#emerchant-rest-api</a><br>
+		<b>Located at</b> <a href="source-class-Syspay_Merchant_Client.html#3-235" title="Go to source code">Syspay/SDK/Merchant/Client.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#24-35" title="Go to source code">__construct</a>( <span>string <var>$username</var></span>, <span>string <var>$secret</var></span>, <span>string <var>$baseUrl</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new client object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new client object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$username</var></dt>
+					<dd><code>string</code><br>$username The Syspay API username</dd>
+					<dt><var>$secret</var></dt>
+					<dd><code>string</code><br>$secret The Syspay API shared secret</dd>
+					<dt><var>$baseUrl</var></dt>
+					<dd><code>string</code><br>$baseUrl The base URL the request should be made to (optional, defaults to prod
+environment)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="request" id="_request">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_request">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#70-153" title="Go to source code">request</a>( <span><code><a href="class-Syspay_Merchant_Request.html">Syspay_Merchant_Request</a></code> <var>$request</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Make a request to the Syspay API</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Make a request to the Syspay API</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd><code><code><a href="class-Syspay_Merchant_Request.html">Syspay_Merchant_Request</a></code></code><br>$request The request to send to the API</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>The response to the request<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RequestException.html">Syspay_Merchant_RequestException</a></code></code><br>If the request could not be processed by the API<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResponseBody" id="_getResponseBody">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResponseBody">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#155-162" title="Go to source code">getResponseBody</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the raw body of the last request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the raw body of the last request.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The last request's response body, or null if the request failed.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getresponseHeaders" id="_getresponseHeaders">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getresponseHeaders">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#164-171" title="Go to source code">getresponseHeaders</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the raw headers of the last request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the raw headers of the last request.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The last request's headers, or null if the request failed<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUsername" id="_getUsername">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUsername">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#173-180" title="Go to source code">getUsername</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the username</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the username</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Merchant username<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSecret" id="_getSecret">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSecret">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#182-189" title="Go to source code">getSecret</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the shared secret</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the shared secret</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>secret<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBaseUrl" id="_getBaseUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBaseUrl">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#191-198" title="Go to source code">getBaseUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the base URL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the base URL</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Base URL<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResponseData" id="_getResponseData">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResponseData">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#200-207" title="Go to source code">getResponseData</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the (decoded) response data, if available</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the (decoded) response data, if available</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Response data<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestHeaders" id="_getRequestHeaders">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestHeaders">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#209-216" title="Go to source code">getRequestHeaders</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the request headers, if available</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the request headers, if available</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Request headers<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestBody" id="_getRequestBody">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestBody">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#218-225" title="Go to source code">getRequestBody</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the request body, if available (POST/PUT requests)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the request body, if available (POST/PUT requests)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Request body<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestParams" id="_getRequestParams">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestParams">#</a>
+		<code><a href="source-class-Syspay_Merchant_Client.html#227-234" title="Go to source code">getRequestParams</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the request params, if available (GET request)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the request params, if available (GET request)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Request body<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="BASE_URL_PROD" id="BASE_URL_PROD">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Syspay_Merchant_Client.html#9" title="Go to source code"><b>BASE_URL_PROD</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'https://app.syspay.com'</span></code></td>
+		<td class="description"><div>
+			<a href="#BASE_URL_PROD" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BASE_URL_SANDBOX" id="BASE_URL_SANDBOX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Syspay_Merchant_Client.html#10" title="Go to source code"><b>BASE_URL_SANDBOX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'https://app-sandbox.syspay.com'</span></code></td>
+		<td class="description"><div>
+			<a href="#BASE_URL_SANDBOX" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Syspay Merchant SDK API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

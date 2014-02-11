@@ -1,0 +1,3 @@
+#!/bin/sh
+
+php vendor/apigen/apigen/apigen.php --source ./lib/ --destination ./docs/ --title "Syspay Merchant SDK" --php no --internal no --access-levels "public"

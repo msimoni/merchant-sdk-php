@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+    echo "Usage: $0 <tree-ish>"
+    exit 65
+fi
+
+version=$1
+
+git show-ref ${version} > /dev/null 2>&1
+
+if [ $? -ne 0 ]
+then
+    echo "Unable to find '${version}' in repository"
+    exit 1
+fi
+
+# If it's not a 'version', use the commit id instead
+if [[ "${version}" =~ ^v[0-9] ]]
+then
+    outversion=${version}
+else
+    outversion=`git rev-parse --short ${version}`
+fi
+
+out=releases/syspay-merchant-sdk-php.${outversion}.zip
+
+git archive --format=zip -o ${out} ${version}
+
+echo "${out} created"

@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Syspay_Merchant_RebillRequest | Syspay Merchant SDK</title>
+
+	<script type="text/javascript" src="resources/combined.js?2446083936"></script>
+	<script type="text/javascript" src="elementlist.js?4249124626"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Syspay_Merchant_BillingAgreementCancellationRequest.html">Syspay_Merchant_BillingAgreementCancellationRequest</a></li>
+				<li><a href="class-Syspay_Merchant_BillingAgreementInfoRequest.html">Syspay_Merchant_BillingAgreementInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_BillingAgreementListRequest.html">Syspay_Merchant_BillingAgreementListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_ChargebackInfoRequest.html">Syspay_Merchant_ChargebackInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_ChargebackListRequest.html">Syspay_Merchant_ChargebackListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Client.html">Syspay_Merchant_Client</a></li>
+				<li><a href="class-Syspay_Merchant_ConfirmRequest.html">Syspay_Merchant_ConfirmRequest</a></li>
+				<li><a href="class-Syspay_Merchant_EMS.html">Syspay_Merchant_EMS</a></li>
+				<li><a href="class-Syspay_Merchant_Entity.html">Syspay_Merchant_Entity</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_BillingAgreement.html">Syspay_Merchant_Entity_BillingAgreement</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Chargeback.html">Syspay_Merchant_Entity_Chargeback</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Creditcard.html">Syspay_Merchant_Entity_Creditcard</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Customer.html">Syspay_Merchant_Entity_Customer</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Payment.html">Syspay_Merchant_Entity_Payment</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_PaymentMethod.html">Syspay_Merchant_Entity_PaymentMethod</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_PaymentRecipient.html">Syspay_Merchant_Entity_PaymentRecipient</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Plan.html">Syspay_Merchant_Entity_Plan</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Refund.html">Syspay_Merchant_Entity_Refund</a></li>
+				<li><a href="class-Syspay_Merchant_Entity_Subscription.html">Syspay_Merchant_Entity_Subscription</a></li>
+				<li><a href="class-Syspay_Merchant_IpAddressesRequest.html">Syspay_Merchant_IpAddressesRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PaymentInfoRequest.html">Syspay_Merchant_PaymentInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PaymentListRequest.html">Syspay_Merchant_PaymentListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PaymentRequest.html">Syspay_Merchant_PaymentRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PlanInfoRequest.html">Syspay_Merchant_PlanInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_PlanRequest.html">Syspay_Merchant_PlanRequest</a></li>
+				<li class="active"><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Redirect.html">Syspay_Merchant_Redirect</a></li>
+				<li><a href="class-Syspay_Merchant_RefundInfoRequest.html">Syspay_Merchant_RefundInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_RefundListRequest.html">Syspay_Merchant_RefundListRequest</a></li>
+				<li><a href="class-Syspay_Merchant_RefundRequest.html">Syspay_Merchant_RefundRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Request.html">Syspay_Merchant_Request</a></li>
+				<li><a href="class-Syspay_Merchant_SubscriptionCancellationRequest.html">Syspay_Merchant_SubscriptionCancellationRequest</a></li>
+				<li><a href="class-Syspay_Merchant_SubscriptionInfoRequest.html">Syspay_Merchant_SubscriptionInfoRequest</a></li>
+				<li><a href="class-Syspay_Merchant_SubscriptionRequest.html">Syspay_Merchant_SubscriptionRequest</a></li>
+				<li><a href="class-Syspay_Merchant_Utils.html">Syspay_Merchant_Utils</a></li>
+				<li><a href="class-Syspay_Merchant_VoidRequest.html">Syspay_Merchant_VoidRequest</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Syspay_Merchant_EMSException.html">Syspay_Merchant_EMSException</a></li>
+				<li><a href="class-Syspay_Merchant_RedirectException.html">Syspay_Merchant_RedirectException</a></li>
+				<li><a href="class-Syspay_Merchant_RequestException.html">Syspay_Merchant_RequestException</a></li>
+				<li><a href="class-Syspay_Merchant_UnexpectedResponseException.html">Syspay_Merchant_UnexpectedResponseException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Syspay_Merchant_RebillRequest</h1>
+
+
+	<div class="description">
+	
+<p>Rebill a customer</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Syspay_Merchant_Request.html"><span>Syspay_Merchant_Request</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Syspay_Merchant_RebillRequest</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>See:</b>
+				<a
+href="https://app.syspay.com/bundles/emiuser/doc/merchant_api.html#issue-a-rebill-on-a-billing-agreement">https://app.syspay.com/bundles/emiuser/doc/merchant_api.html#issue-a-rebill-on-a-billing-agreement</a><br>
+		<b>Located at</b> <a href="source-class-Syspay_Merchant_RebillRequest.html#3-323" title="Go to source code">Syspay/SDK/Merchant/Request/Rebill.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#52-57" title="Go to source code">__construct</a>( <span>mixed <var>$billingAgreementId</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMethod" id="_getMethod">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMethod">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#59-65" title="Go to source code">getMethod</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the HTTP method to use to make the request</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the HTTP method to use to make the request</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>HTTP method<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPath" id="_getPath">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPath">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#67-73" title="Go to source code">getPath</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the path to call to make the request</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the path to call to make the request</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>API path<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildResponse" id="_buildResponse">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildResponse">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#75-90" title="Go to source code">buildResponse</a>( <span>stdClass <var>$response</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Build an object based on the decoded response received from the API (turned
+to a stdClass object)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Build an object based on the decoded response received from the API (turned
+to a stdClass object)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$response</var></dt>
+					<dd><code>stdClass</code><br>$response The data to build the object from</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>The object built<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getData" id="_getData">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getData">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#92-130" title="Go to source code">getData</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the data to send to the API for the request</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the data to send to the API for the request</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of data that will be json-encoded by the Syspay_Merchant_Client<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Syspay_Merchant_Request.html#_getData">Syspay_Merchant_Request::getData()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThreatMetrixSessionId" id="_getThreatMetrixSessionId">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThreatMetrixSessionId">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#132-140" title="Go to source code">getThreatMetrixSessionId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of threatMetrixSessionId.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of threatMetrixSessionId.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setThreatMetrixSessionId" id="_setThreatMetrixSessionId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setThreatMetrixSessionId">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#142-154" title="Go to source code">setThreatMetrixSessionId</a>( <span>string <var>$threatMetrixSessionId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of threatMetrixSessionId.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of threatMetrixSessionId.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$threatMetrixSessionId</var></dt>
+					<dd><code>string</code><br>$threatMetrixSessionId the threatMetrixSessionId</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEmsUrl" id="_getEmsUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEmsUrl">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#156-164" title="Go to source code">getEmsUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of emsUrl.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of emsUrl.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEmsUrl" id="_setEmsUrl">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEmsUrl">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#166-178" title="Go to source code">setEmsUrl</a>( <span>string <var>$emsUrl</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of emsUrl.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of emsUrl.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$emsUrl</var></dt>
+					<dd><code>string</code><br>$emsUrl the emsUrl</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBillingAgreementId" id="_getBillingAgreementId">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBillingAgreementId">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#180-188" title="Go to source code">getBillingAgreementId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of billingAgreementId.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of billingAgreementId.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBillingAgreementId" id="_setBillingAgreementId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBillingAgreementId">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#190-202" title="Go to source code">setBillingAgreementId</a>( <span>integer <var>$billingAgreementId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of billingAgreementId.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of billingAgreementId.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$billingAgreementId</var></dt>
+					<dd><code>integer</code><br>$billingAgreementId the billingAgreementId</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReference" id="_getReference">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReference">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#204-212" title="Go to source code">getReference</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of reference.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of reference.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setReference" id="_setReference">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setReference">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#214-226" title="Go to source code">setReference</a>( <span>string <var>$reference</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of reference.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of reference.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$reference</var></dt>
+					<dd><code>string</code><br>$reference the reference</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAmount" id="_getAmount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAmount">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#228-236" title="Go to source code">getAmount</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of amount.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of amount.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAmount" id="_setAmount">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAmount">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#238-250" title="Go to source code">setAmount</a>( <span>integer <var>$amount</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of amount.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of amount.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$amount</var></dt>
+					<dd><code>integer</code><br>$amount the amount</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCurrency" id="_getCurrency">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrency">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#252-260" title="Go to source code">getCurrency</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of currency.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of currency.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCurrency" id="_setCurrency">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCurrency">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#262-274" title="Go to source code">setCurrency</a>( <span>string <var>$currency</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of currency.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of currency.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$currency</var></dt>
+					<dd><code>string</code><br>$currency the currency</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDescription" id="_getDescription">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDescription">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#276-284" title="Go to source code">getDescription</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of description.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of description.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDescription" id="_setDescription">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDescription">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#286-298" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of description.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of description.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$description</var></dt>
+					<dd><code>string</code><br>$description the description</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExtra" id="_getExtra">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getExtra">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#300-308" title="Go to source code">getExtra</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of extra.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of extra.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExtra" id="_setExtra">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setExtra">#</a>
+		<code><a href="source-class-Syspay_Merchant_RebillRequest.html#310-322" title="Go to source code">setExtra</a>( <span>string <var>$extra</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of extra.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of extra.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$extra</var></dt>
+					<dd><code>string</code><br>$extra the extra</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Syspay_Merchant_RebillRequest.html">Syspay_Merchant_RebillRequest</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="METHOD" id="METHOD">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Syspay_Merchant_RebillRequest.html#9" title="Go to source code"><b>METHOD</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'POST'</span></code></td>
+		<td class="description"><div>
+			<a href="#METHOD" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PATH" id="PATH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Syspay_Merchant_RebillRequest.html#10" title="Go to source code"><b>PATH</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'/api/v1/merchant/billing-agreement/%d/rebill'</span></code></td>
+		<td class="description"><div>
+			<a href="#PATH" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Syspay Merchant SDK API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "syspay/merchant-sdk-php",
+  "type": "library",
+  "description": "SysPay PHP Merchant SDK",
+  "homepage": "https://syspay.com/",
+  "keywords": [
+    "syspay", "api", "sdk", "payment"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SysPay Ltd."
+    }
+  ],
+  "require": {
+    "php": ">=5.2",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "apigen/apigen": "dev-master"
+  },
+  "autoload": {
+    "classmap": ["lib/Syspay/"]
+  }
+}

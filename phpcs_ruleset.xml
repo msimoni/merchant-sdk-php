@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="syspay-sdk">
+  <description>PSR-2 with the namespace and classname checks disabled (for php 5.2 compatibility)</description>
+
+  <rule ref="PSR2">
+    <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    <exclude name="Squiz.Classes.ValidClassName"/>
+   </rule>
+</ruleset>
