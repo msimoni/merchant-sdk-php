@@ -1,11 +1,23 @@
-# Syspay PHP Merchant SDK
-
-## API Documentation
-An online version of the API documentation can be found [on our site](https://app.syspay.com/docs/merchant-sdk-php/index.html)
+# SysPay PHP Merchant SDK
 
 ## Installation
 This library requires php 5.2+ along with the `json` and the `curl` extensions.
 
+### Using composer
+
+The easiest way to start using our SDK and stay up to date is by adding it to your composer dependencies:
+```
+$ composer.phar require syspay/merchant-sdk-php dev-master
+```
+
+### Manual
+
+Obtain a copy of this SDK:
+```
+$ git clone https://github.com/syspay/merchant-sdk-php.git
+```
+
+Then, include our loader.php:
 ```php
 <?php
 require_once('/path/to/loader.php');
@@ -24,7 +36,7 @@ $client = new Syspay_Merchant_Client($username, $secret[, $baseUrl]);
 
 To call against the sandbox environment, the `$baseUrl` can be set to `Syspay_Merchant_Client::BASE_URL_SANDBOX`.
 
-### Creditcard payment request
+### Creditcard payment request (server to server)
 
 Request class: [Syspay\_Merchant\_PaymentRequest](https://app.syspay.com/docs/merchant-sdk-php/class-Syspay_Merchant_PaymentRequest.html)
 
@@ -61,6 +73,34 @@ $paymentRequest->setPayment($payment);
 
 $payment = $client->request($paymentRequest);
 // $payment is an instance of Syspay_Merchant_Entity_Payment
+```
+
+### Hosted payment request
+
+Request class: [Syspay\_Merchant\_PaymentRequest](https://app.syspay.com/docs/merchant-sdk-php/class-Syspay_Merchant_PaymentRequest.html)
+
+```php
+<?php
+$paymentRequest = new Syspay_Merchant_PaymentRequest(Syspay_Merchant_PaymentRequest::FLOW_BUYER);
+$paymentRequest->setMode(Syspay_Merchant_PaymentRequest::MODE_ONLINE); // Refer to the documentation for the 'terminal' mode
+$paymentRequest->setBillingAgreement(true); // true means you want to be able to rebill this customer later. Defaults to false
+
+// Assigning a customer to the request is optional on the hosted flow but recommended to pre-fill the payment form
+$customer = new Syspay_Merchant_Entity_Customer();
+$customer->setEmail('foo@bar.baz'); // Customer's email
+$customer->setLanguage('en'); // Used to send notifications in the correct language and overwrite the payment page language (by default it tries to accomodate the browser settings)
+$paymentRequest->setCustomer($customer);
+
+$payment = new Syspay_Merchant_Entity_Payment();
+$payment->setReference('1234567'); // Your own reference for this payment
+$payment->setAmount(1000); // Amount in *cents*
+$payment->setCurrency('EUR'); // Currency
+$payment->setDescription('some description'); // An optional description
+$payment->setExtra(json_encode($someInformation)); // An optional information that will given back to you on notifications
+$paymentRequest->setPayment($payment);
+
+$payment = $client->request($paymentRequest);
+// $payment is an instance of Syspay_Merchant_Entity_Payment, you can now redirect your customer to $payment->getRedirect()
 ```
 
 ### Confirm an AUTHORIZED payment
