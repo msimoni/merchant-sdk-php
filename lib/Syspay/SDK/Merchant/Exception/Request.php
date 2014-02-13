@@ -9,7 +9,7 @@ class Syspay_Merchant_RequestException extends RuntimeException
     private $headers;
     private $body;
 
-    public function __construct($httpCode, $headers = null, $body = null, Exception $previous = null)
+    public function __construct($httpCode, $headers = null, $body = null, $previous = null)
     {
         $this->httpCode = $httpCode;
         $this->headers  = $headers;

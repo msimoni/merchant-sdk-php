@@ -7,7 +7,7 @@ class Syspay_Merchant_UnexpectedResponseException extends RuntimeException
 {
     private $response;
 
-    public function __construct($message = null, $response = null, $code = 0, \Exception $previous = null)
+    public function __construct($message = null, $response = null, $code = 0, $previous = null)
     {
         $this->response = $response;
         if (version_compare(PHP_VERSION, '5.3.0', '>=')) {
