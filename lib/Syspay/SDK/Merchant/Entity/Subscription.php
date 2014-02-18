@@ -163,6 +163,12 @@ class Syspay_Merchant_Entity_Subscription extends Syspay_Merchant_Entity
             $subscription->setCustomer($customer);
         }
 
+        if (isset($response->plan)
+                && ($response->plan instanceof stdClass)) {
+            $plan = Syspay_Merchant_Entity_Plan::buildFromResponse($response->plan);
+            $subscription->setPlan($plan);
+        }
+
         return $subscription;
     }
 
