@@ -70,6 +70,11 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
     private $agent;
 
     /**
+     * @var integer
+     */
+    private $allowedRetries;
+
+    /**
      * @var Syspay_Merchant_Entity_Payment
      */
     private $payment;
@@ -181,6 +186,10 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
 
         if (false === empty($this->payment)) {
             $data['payment'] = (array) $this->payment->toArray();
+        }
+
+        if (false === empty($this->allowedRetries)) {
+            $data['allowed_retries'] = $this->allowedRetries;
         }
 
         return $data;
@@ -468,6 +477,30 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
     public function setAgent($agent)
     {
         $this->agent = $agent;
+        return $this;
+    }
+
+    /**
+     * Gets the value of allowedRetries.
+     *
+     * @return integer
+     */
+    public function getAllowedRetries()
+    {
+        return $this->allowedRetries;
+    }
+
+    /**
+     * Sets the value of allowedRetries.
+     *
+     * @param integer $allowedRetries the allowed retries
+     *
+     * @return self
+     */
+    public function setAllowedRetries($allowedRetries)
+    {
+        $this->allowedRetries = $allowedRetries;
+
         return $this;
     }
 }
