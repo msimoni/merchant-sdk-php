@@ -15,11 +15,14 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
     const MODE_ONLINE   = 'ONLINE';
     const MODE_TERMINAL = 'TERMINAL';
 
-    const METHOD_CREDITCARD  = 'CREDITCARD';
-    const METHOD_PAYSAFECARD = 'PAYSAFECARD';
-    const METHOD_CLICKANDBUY = 'CLICKANDBUY';
-    const METHOD_IDEAL       = 'IDEAL';
-    const METHOD_POSTFINANCE = 'POSTFINANCE';
+    const METHOD_ASTROPAY_BANKTRANSFER   = 'ASTROPAY_BANKTRANSFER';
+    const METHOD_ASTROPAY_BOLETOBANCARIO = 'ASTROPAY_BOLETOBANCARIO';
+    const METHOD_ASTROPAY_DEBITCARD      = 'ASTROPAY_DEBITCARD';
+    const METHOD_CLICKANDBUY             = 'CLICKANDBUY';
+    const METHOD_CREDITCARD              = 'CREDITCARD';
+    const METHOD_IDEAL                   = 'IDEAL';
+    const METHOD_PAYSAFECARD             = 'PAYSAFECARD';
+    const METHOD_POSTFINANCE             = 'POSTFINANCE';
 
     const METHOD = 'POST';
     const PATH   = '/api/v1/merchant/payment';
@@ -88,6 +91,11 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
      * @var Syspay_Merchant_Entity_Creditcard
      */
     private $creditcard;
+
+    /**
+     * @var string
+     */
+    private $bankCode;
 
     public function __construct($flow)
     {
@@ -190,6 +198,10 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
 
         if (false === empty($this->allowedRetries)) {
             $data['allowed_retries'] = $this->allowedRetries;
+        }
+
+        if (false === empty($this->bankCode)) {
+            $data['bank_code'] = $this->bankCode;
         }
 
         return $data;
@@ -500,6 +512,30 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
     public function setAllowedRetries($allowedRetries)
     {
         $this->allowedRetries = $allowedRetries;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of bankCode.
+     *
+     * @return string
+     */
+    public function getBankCode()
+    {
+        return $this->bankCode;
+    }
+
+    /**
+     * Sets the value of bankCode.
+     *
+     * @param string $bankCode the bank code
+     *
+     * @return self
+     */
+    public function setBankCode($bankCode)
+    {
+        $this->bankCode = $bankCode;
 
         return $this;
     }
