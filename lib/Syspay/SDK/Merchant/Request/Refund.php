@@ -20,6 +20,11 @@ class Syspay_Merchant_RefundRequest extends Syspay_Merchant_Request
     private $refund;
 
     /**
+     * @var string
+     */
+    private $emsUrl;
+
+    /**
      * {@inheritDoc}
      */
     public function getMethod()
@@ -59,6 +64,10 @@ class Syspay_Merchant_RefundRequest extends Syspay_Merchant_Request
     {
         $data = $this->refund->toArray();
         $data['payment_id'] = $this->paymentId;
+
+        if (false === empty($this->emsUrl)) {
+            $data['ems_url'] = $this->emsUrl;
+        }
 
         return $data;
     }
@@ -108,6 +117,30 @@ class Syspay_Merchant_RefundRequest extends Syspay_Merchant_Request
     public function setRefund(Syspay_Merchant_Entity_Refund $refund)
     {
         $this->refund = $refund;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of emsUrl.
+     *
+     * @return string
+     */
+    public function getEmsUrl()
+    {
+        return $this->emsUrl;
+    }
+
+    /**
+     * Sets the value of emsUrl.
+     *
+     * @param string $emsUrl the emsUrl
+     *
+     * @return self
+     */
+    public function setEmsUrl($emsUrl)
+    {
+        $this->emsUrl = $emsUrl;
 
         return $this;
     }
