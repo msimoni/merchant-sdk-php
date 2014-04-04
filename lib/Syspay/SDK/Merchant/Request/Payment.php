@@ -254,21 +254,21 @@ class Syspay_Merchant_PaymentRequest extends Syspay_Merchant_Request
     }
 
     /**
-     * Sets the value of threatMatrixSessionId
+     * Sets the value of threatMetrixSessionId
      *
-     * @param string $threatMatrixSessionId
+     * @param string $threatMetrixSessionId
      *
      * @return self
      */
-    public function setThreatMetrixSessionId($threatMatrixSessionId)
+    public function setThreatMetrixSessionId($threatMetrixSessionId)
     {
-        $this->threatMetrixSessionId = $threatMatrixSessionId;
+        $this->threatMetrixSessionId = $threatMetrixSessionId;
 
         return $this;
     }
 
     /**
-     * Get the value of threatMatrixSessionId
+     * Get the value of threatMetrixSessionId
      *
      * @return string
      */
