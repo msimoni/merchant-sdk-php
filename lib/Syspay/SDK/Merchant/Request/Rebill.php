@@ -49,6 +49,11 @@ class Syspay_Merchant_RebillRequest extends Syspay_Merchant_Request
      */
     private $extra;
 
+    /**
+     * @var array
+     */
+    private $recipient_map;
+
     public function __construct($billingAgreementId = null)
     {
         if (null !== $billingAgreementId) {
@@ -124,6 +129,14 @@ class Syspay_Merchant_RebillRequest extends Syspay_Merchant_Request
 
         if (false === empty($this->extra)) {
             $data['payment']['extra'] = $this->extra;
+        }
+
+        if (false === empty($this->recipient_map)
+                && is_array($this->recipient_map)) {
+            $data['payment']['recipient_map'] = array();
+            foreach ($this->recipient_map as $r) {
+                $data['payment']['recipient_map'][] = $r->toArray();
+            }
         }
 
         return $data;
@@ -319,5 +332,51 @@ class Syspay_Merchant_RebillRequest extends Syspay_Merchant_Request
         $this->extra = $extra;
 
         return $this;
+    }
+
+    /**
+     * Gets the value of recipient_map.
+     *
+     * @return array
+     */
+    public function getRecipientMap()
+    {
+        return $this->recipient_map;
+    }
+
+    /**
+     * Sets the value of recipient_map.
+     *
+     * @param array $recipientMap An array of Syspay_Merchant_Entity_PaymentRecipient
+     *
+     * @return self
+     */
+    public function setRecipientMap(array $recipientMap)
+    {
+        foreach ($recipientMap as $r) {
+            if (!$r instanceof Syspay_Merchant_Entity_PaymentRecipient) {
+                throw new InvalidArgumentException(
+                    'The given array must only contain Syspay_Merchant_Entity_PaymentRecipient instances'
+                );
+            }
+        }
+        $this->recipient_map = $recipientMap;
+
+        return $this;
+    }
+
+    /**
+     * Add a PaymentRecipient to the recipient map list
+     *
+     * @param Syspay_Merchant_Entity_PaymentRecipient $paymentRecipient
+     *
+     * @return self
+     */
+    public function addRecipient(Syspay_Merchant_Entity_PaymentRecipient $paymentRecipient)
+    {
+        if (!isset($this->recipient_map)) {
+            $this->recipient_map = array();
+        }
+        array_push($this->recipient_map, $paymentRecipient);
     }
 }
