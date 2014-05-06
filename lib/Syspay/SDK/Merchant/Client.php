@@ -14,12 +14,14 @@ class Syspay_Merchant_Client
     protected $baseUrl;
 
     protected $responseBody    = null;
-    protected $responseHeaders = null;
+    protected $responseHeaders = array();
     protected $responseData    = null;
 
     protected $requestBody     = null;
-    protected $requestHeaders  = null;
+    protected $requestHeaders  = array();
     protected $requestParams   = null;
+
+    protected $requestId       = null;
 
     /**
      * Creates a new client object
@@ -75,8 +77,8 @@ class Syspay_Merchant_Client
      */
     public function request(Syspay_Merchant_Request $request)
     {
-        $this->requestBody = $this->requestHeaders =
-            $this->responseBody = $this->responseHeaders = $this->responseData = null;
+        $this->requestBody = $this->responseBody = $this->responseData = $this->requestId = null;
+        $this->responseHeaders = $this->requestHeaders = array();
 
         $headers = array(
             'Accept: application/json',
@@ -133,8 +135,11 @@ class Syspay_Merchant_Client
         }
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         list($headers, $body) = explode("\r\n\r\n", $response, 2);
-        $this->responseHeaders = $headers;
+        $this->responseHeaders = explode("\r\n", $headers);
         $this->responseBody    = $body;
+        if (preg_match('/\nx-syspay-request-uuid: (.*?)\r?\n/i', $headers, $m)) {
+            $this->requestId = $m[1];
+        }
 
         if (!in_array($httpCode, array(200, 201))) {
             throw new Syspay_Merchant_RequestException($httpCode, $headers, $body);
@@ -163,9 +168,9 @@ class Syspay_Merchant_Client
 
     /**
      * Get the raw headers of the last request.
-     * @return string The last request's headers, or null if the request failed
+     * @return array The last request's headers, or an empty array if the request failed
      */
-    public function getresponseHeaders()
+    public function getResponseHeaders()
     {
         return $this->responseHeaders;
     }
@@ -231,5 +236,13 @@ class Syspay_Merchant_Client
     public function getRequestParams()
     {
         return $this->requestParams;
+    }
+
+    /**
+     * Get the last request's id
+     */
+    public function getRequestId()
+    {
+        return $this->requestId;
     }
 }
