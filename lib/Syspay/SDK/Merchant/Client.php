@@ -240,6 +240,7 @@ class Syspay_Merchant_Client
 
     /**
      * Get the last request's id
+     * @return string Request Id or null if it couldn't be extracted
      */
     public function getRequestId()
     {
