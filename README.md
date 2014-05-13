@@ -366,7 +366,7 @@ $plan = $client->request($planRequest);
 // $plan is an instance of Syspay_Merchant_Entity_Plan
 ```
 
-#### Example 3: Instalment plan, take 100 EUR in 3 months
+#### Example 3: Instalment plan, take 100 EUR in 3 times, once per month
 
 ```php
 <?php
