@@ -165,7 +165,7 @@ You request a [refund](https://app.syspay.com/docs/merchant-sdk-php/class-Syspay
 
 ```php
 <?php
-$refund = new Syspay_Merchant_Entity\Refund();
+$refund = new Syspay_Merchant_Entity_Refund();
 $refund->setReference('1234567'); // Your own reference for this refund
 $refund->setAmount(1000); // The amount to refund in *cents*
 $refund->setCurrency('EUR'); // The currency of the refund. It must match the one of the original payment
