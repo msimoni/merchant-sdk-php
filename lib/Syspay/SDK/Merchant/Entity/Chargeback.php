@@ -41,6 +41,11 @@ class Syspay_Merchant_Entity_Chargeback extends Syspay_Merchant_Entity
      * @var DateTime
      */
     private $processingTime;
+    
+    /**
+     * @var DateTime
+     */
+    private $bankTime;
 
     /**
      * Build a payment entity based on a json-decoded payment stdClass
@@ -60,6 +65,11 @@ class Syspay_Merchant_Entity_Chargeback extends Syspay_Merchant_Entity
         if (isset($response->processing_time)
                 && !is_null($response->processing_time)) {
             $chargeback->setProcessingTime(Syspay_Merchant_Utils::tsToDateTime($response->processing_time));
+        }
+        
+        if (isset($response->bank_time)
+                && !is_null($response->bank_time)) {
+            $chargeback->setBankTime(Syspay_Merchant_Utils::tsToDateTime($response->bank_time));
         }
 
         if (isset($response->payment)) {
@@ -233,6 +243,30 @@ class Syspay_Merchant_Entity_Chargeback extends Syspay_Merchant_Entity
     public function setProcessingTime(DateTime $processingTime)
     {
         $this->processingTime = $processingTime;
+
+        return $this;
+    }
+    
+    /**
+     * Gets the value of bankTime.
+     *
+     * @return DateTime
+     */
+    public function getBankTime()
+    {
+        return $this->bankTime;
+    }
+    
+    /**
+     * Sets the value of bankTime.
+     *
+     * @param DateTime $bankTime the bankTime
+     *
+     * @return self
+     */
+    public function setBankTime(DateTime $bankTime)
+    {
+        $this->bankTime = $bankTime;
 
         return $this;
     }
