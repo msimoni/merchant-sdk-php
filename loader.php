@@ -25,6 +25,7 @@ $required = array(
     'Entity/Plan',
     'Entity/Refund',
     'Entity/Subscription',
+    'Entity/SubscriptionEvent',
     'Exception/EMS',
     'Exception/Redirect',
     'Exception/Request',

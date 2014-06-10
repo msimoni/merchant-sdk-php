@@ -123,6 +123,11 @@ class Syspay_Merchant_Entity_Subscription extends Syspay_Merchant_Entity
     private $redirect;
 
     /**
+     * @var Syspay_Merchant_Entity_SubscriptionEvent
+     */
+    private $next_event;
+
+    /**
      * Build a subscription entity based on a json-decoded subscription stdClass
      *
      * @param  stdClass $response The subscription data
@@ -167,6 +172,12 @@ class Syspay_Merchant_Entity_Subscription extends Syspay_Merchant_Entity
                 && ($response->plan instanceof stdClass)) {
             $plan = Syspay_Merchant_Entity_Plan::buildFromResponse($response->plan);
             $subscription->setPlan($plan);
+        }
+
+        if (isset($response->next_event)
+                && ($response->next_event instanceof stdClass)) {
+            $nextEvent = Syspay_Merchant_Entity_SubscriptionEvent::buildFromResponse($response->next_event);
+            $subscription->setNextEvent($nextEvent);
         }
 
         return $subscription;
@@ -615,4 +626,31 @@ class Syspay_Merchant_Entity_Subscription extends Syspay_Merchant_Entity
         }
         return $data;
     }
+
+
+    /**
+     * Gets the next event
+     *
+     * @return Syspay_Merchant_Entity_SubscriptionEvent
+     */
+    public function getNextEvent()
+    {
+        return $this->next_event;
+    }
+
+    /**
+     * Sets the next event
+     *
+     * @param Syspay_Merchant_Entity_SubscriptionEvent $next_event The next subscription event
+     *
+     * @return self
+     */
+    public function setNextEvent(Syspay_Merchant_Entity_SubscriptionEvent $next_event)
+    {
+        $this->next_event = $next_event;
+
+        return $this;
+    }
+
+
 }
