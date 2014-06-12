@@ -159,6 +159,11 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
     protected $recipient_map;
 
     /**
+     * @var string
+     */
+    protected $paymentType;
+    
+    /**
      * Gets the value of reference.
      *
      * @return string
@@ -417,6 +422,7 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
         $payment->setWebsite(isset($response->website)?$response->website:null);
         $payment->setFailureCategory(isset($response->failure_category)?$response->failure_category:null);
         $payment->setChipAndPinStatus(isset($response->chip_and_pin_status)?$response->chip_and_pin_status:null);
+        $payment->setPaymentType(isset($response->payment_type)?$response->payment_type:null);
 
         if (isset($response->processing_time)
                 && !is_null($response->processing_time)) {
@@ -553,6 +559,30 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
     public function setChipAndPinStatus($chipAndPinStatus)
     {
         $this->chipAndPinStatus = $chipAndPinStatus;
+
+        return $this;
+    }
+    
+    /**
+     * Gets the value of paymentType.
+     *
+     * @return string
+     */
+    public function getPaymentType()
+    {
+        return $this->paymentType;
+    }
+
+    /**
+     * Sets the value of paymentType.
+     *
+     * @param string $paymentType the paymentType
+     *
+     * @return self
+     */
+    public function setPaymentType($paymentType)
+    {
+        $this->paymentType = $paymentType;
 
         return $this;
     }
