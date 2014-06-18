@@ -143,6 +143,7 @@ class Syspay_Merchant_Entity_Subscription extends Syspay_Merchant_Entity
         $subscription->setStatus(isset($response->status)?$response->status:null);
         $subscription->setPhase(isset($response->phase)?$response->phase:null);
         $subscription->setExtra(isset($response->extra)?$response->extra:null);
+        $subscription->setEmsUrl(isset($response->ems_url)?$response->ems_url:null);
         $subscription->setCreated(
             isset($response->created)?Syspay_Merchant_Utils::tsToDateTime($response->created):null
         );
