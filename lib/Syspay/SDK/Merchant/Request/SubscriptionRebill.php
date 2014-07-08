@@ -38,6 +38,11 @@ class Syspay_Merchant_SubscriptionRebillRequest extends Syspay_Merchant_Request
     /**
      * @var string
      */
+    private $emsUrl;
+
+    /**
+     * @var string
+     */
     private $extra;
 
     public function __construct($subscriptionId = null)
@@ -105,6 +110,10 @@ class Syspay_Merchant_SubscriptionRebillRequest extends Syspay_Merchant_Request
 
         if (false === empty($this->extra)) {
             $data['extra'] = $this->extra;
+        }
+
+        if (false === empty($this->emsUrl)) {
+            $data['ems_url'] = $this->emsUrl;
         }
 
         return $data;
@@ -253,4 +262,29 @@ class Syspay_Merchant_SubscriptionRebillRequest extends Syspay_Merchant_Request
 
         return $this;
     }
+
+    /**
+     * Gets the value of emsUrl.
+     *
+     * @return string
+     */
+    public function getEmsUrl()
+    {
+        return $this->emsUrl;
+    }
+
+    /**
+     * Sets the value of emsUrl.
+     *
+     * @param string $emsUrl the emsUrl
+     *
+     * @return self
+     */
+    public function setEmsUrl($emsUrl)
+    {
+        $this->emsUrl = $emsUrl;
+
+        return $this;
+    }
+
 }
