@@ -193,6 +193,7 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
      * @var integer
      */
     private $website;
+
     /**
      * @var Syspay_Merchant_Entity_BillingAgreement
      */
@@ -221,8 +222,43 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
     /**
      * @var string
      */
-    protected $paymentType;
-    
+    private $paymentType;
+
+    /**
+     * @var string
+     */
+    private $websiteUrl;
+
+    /**
+     * @var string
+     */
+    private $contract;
+
+    /**
+     * @var string
+     */
+    private $descriptor;
+
+    /**
+     * @var integer
+     */
+    private $accountId;
+
+    /**
+     * @var string
+     */
+    private $merchantLogin;
+
+    /**
+     * @var integer
+     */
+    private $merchantId;
+
+    /**
+     * @var DateTime
+     */
+    private $settlementDate;
+
     /**
      * Gets the value of reference.
      *
@@ -483,6 +519,17 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
         $payment->setFailureCategory(isset($response->failure_category)?$response->failure_category:null);
         $payment->setChipAndPinStatus(isset($response->chip_and_pin_status)?$response->chip_and_pin_status:null);
         $payment->setPaymentType(isset($response->payment_type)?$response->payment_type:null);
+        $payment->setWebsiteUrl(isset($response->website_url)?$response->website_url:null);
+        $payment->setContract(isset($response->contract)?$response->contract:null);
+        $payment->setDescriptor(isset($response->descriptor)?$response->descriptor:null);
+        $payment->setAccountId(isset($response->account_id)?$response->account_id:null);
+        $payment->setMerchantLogin(isset($response->merchant_login)?$response->merchant_login:null);
+        $payment->setMerchantId(isset($reponse->merchant_id)?$response->merchant_id:null);
+
+        if (isset($response->settlement_date)
+                && !is_null($response->settlement_date)) {
+            $payment->setSettlementDate(Syspay_Merchant_Utils::tsToDateTime($response->settlement_date));
+        }
 
         if (isset($response->processing_time)
                 && !is_null($response->processing_time)) {
@@ -622,7 +669,7 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
 
         return $this;
     }
-    
+
     /**
      * Gets the value of paymentType.
      *
@@ -707,5 +754,173 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
             unset($data['recipient_map']);
         }
         return $data;
+    }
+
+    /**
+     * Gets the value of settlementDate.
+     *
+     * @return DateTime
+     */
+    public function getSettlementDate()
+    {
+        return $this->settlementDate;
+    }
+
+    /**
+     * Sets the value of settlementDate.
+     *
+     * @param DateTime $settlementDate the settlement date
+     *
+     * @return self
+     */
+    public function setSettlementDate(DateTime $settlementDate = null)
+    {
+        $this->settlementDate = $settlementDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of websiteUrl.
+     *
+     * @return string
+     */
+    public function getWebsiteUrl()
+    {
+        return $this->websiteUrl;
+    }
+
+    /**
+     * Sets the value of websiteUrl.
+     *
+     * @param string $websiteUrl the website url
+     *
+     * @return self
+     */
+    public function setWebsiteUrl($websiteUrl)
+    {
+        $this->websiteUrl = $websiteUrl;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of contract.
+     *
+     * @return string
+     */
+    public function getContract()
+    {
+        return $this->contract;
+    }
+
+    /**
+     * Sets the value of contract.
+     *
+     * @param string $contract the contract
+     *
+     * @return self
+     */
+    public function setContract($contract)
+    {
+        $this->contract = $contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of descriptor.
+     *
+     * @return string
+     */
+    public function getDescriptor()
+    {
+        return $this->descriptor;
+    }
+
+    /**
+     * Sets the value of descriptor.
+     *
+     * @param string $descriptor the descriptor
+     *
+     * @return self
+     */
+    public function setDescriptor($descriptor)
+    {
+        $this->descriptor = $descriptor;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of accountId.
+     *
+     * @return integer
+     */
+    public function getAccountId()
+    {
+        return $this->accountId;
+    }
+
+    /**
+     * Sets the value of accountId.
+     *
+     * @param integer $accountId the account id
+     *
+     * @return self
+     */
+    public function setAccountId($accountId)
+    {
+        $this->accountId = $accountId;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of merchantLogin.
+     *
+     * @return string
+     */
+    public function getMerchantLogin()
+    {
+        return $this->merchantLogin;
+    }
+
+    /**
+     * Sets the value of merchantLogin.
+     *
+     * @param string $merchantLogin the merchant login
+     *
+     * @return self
+     */
+    public function setMerchantLogin($merchantLogin)
+    {
+        $this->merchantLogin = $merchantLogin;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of merchantId.
+     *
+     * @return integer
+     */
+    public function getMerchantId()
+    {
+        return $this->merchantId;
+    }
+
+    /**
+     * Sets the value of merchantId.
+     *
+     * @param integer $merchantId the merchant id
+     *
+     * @return self
+     */
+    public function setMerchantId($merchantId)
+    {
+        $this->merchantId = $merchantId;
+
+        return $this;
     }
 }

@@ -2,8 +2,10 @@
 
 /**
  * Process a subscription
+ *
  * @see https://app.syspay.com/docs/api/merchant_subscription.html#subscribe-a-customer-to-a-plan-hosted-flow
  * @see https://app.syspay.com/docs/api/merchant_subscription.html#subscribe-a-customer-to-a-plan-server-2-server-flow
+ * @see https://app.syspay.com/docs/api/merchant_subscription.html#subscribe-a-customer-to-a-plan-by-re-using-an-existing-subscription-or-billing-agreement
  */
 class Syspay_Merchant_SubscriptionRequest extends Syspay_Merchant_Request
 {
@@ -45,6 +47,16 @@ class Syspay_Merchant_SubscriptionRequest extends Syspay_Merchant_Request
     private $creditcard;
 
     /**
+     * @var integer
+     */
+    private $useSubscription;
+
+    /**
+     * @var integer
+     */
+    private $useBillingAgreement;
+
+    /**
      * {@inheritDoc}
      */
     public function getMethod()
@@ -83,6 +95,14 @@ class Syspay_Merchant_SubscriptionRequest extends Syspay_Merchant_Request
 
         if (false === empty($this->creditcard)) {
             $data['creditcard'] = $this->creditcard->toArray();
+        }
+
+        if (false === empty($this->useSubscription)) {
+            $data['use_subscription'] = $this->useSubscription;
+        }
+
+        if (false === empty($this->useBillingAgreement)) {
+            $data['use_billing_agreement'] = $this->useBillingAgreement;
         }
 
         return $data;
@@ -250,6 +270,54 @@ class Syspay_Merchant_SubscriptionRequest extends Syspay_Merchant_Request
     public function setCreditcard(Syspay_Merchant_Entity_Creditcard $creditcard)
     {
         $this->creditcard = $creditcard;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of useSubscription.
+     *
+     * @return integer
+     */
+    public function getUseSubscription()
+    {
+        return $this->useSubscription;
+    }
+
+    /**
+     * Sets the value of useSubscription.
+     *
+     * @param integer $useSubscription the use subscription
+     *
+     * @return self
+     */
+    public function setUseSubscription($useSubscription)
+    {
+        $this->useSubscription = $useSubscription;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of useBillingAgreement.
+     *
+     * @return integer
+     */
+    public function getUseBillingAgreement()
+    {
+        return $this->useBillingAgreement;
+    }
+
+    /**
+     * Sets the value of useBillingAgreement.
+     *
+     * @param integer $useBillingAgreement the use billing agreement
+     *
+     * @return self
+     */
+    public function setUseBillingAgreement($useBillingAgreement)
+    {
+        $this->useBillingAgreement = $useBillingAgreement;
 
         return $this;
     }

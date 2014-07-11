@@ -459,6 +459,22 @@ $subscription = $client->request($subscriptionRequest);
 // $subscription is an instance of Syspay_Merchant_Entity_Subscription
 // The subscription will be ACTIVE on success, CANCELLED on failure, or PENDING if there is a redirect to do
 ```
+### Issue a manual rebill on a subscription
+
+Request class: [Syspay\_Merchant\_SubscriptionRebillRequest](https://app.syspay.com/docs/merchant-sdk-php/class-Syspay_Merchant_SubscriptionRebillRequest.html)
+
+```php
+<?php
+$rebillRequest = new Syspay_Merchant_SubscriptionRebillRequest($subscriptionId);
+$rebillRequest->setAmount(4200);
+$rebillRequest->setCurrency('EUR');
+$rebillRequest->setExtra('foobarbaz'); // optional, will use the subscription's if not defined
+$rebillRequest->setDescription('Extra credits'); // optional, will use the plan's if not defined
+$rebillRequest->setReference(12345); // optional, will use the subscription's if not defined
+$rebillRequest->setEmsUrl('https://merchant.com/notification'); // optional, will use the subscription's if not defined
+$payment = $client->request($cancelRequest);
+// $payment is an instance of Syspay_Merchant_Entity_Payment
+```
 
 ### Cancel a subsription or instalment plan
 

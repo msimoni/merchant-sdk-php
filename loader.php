@@ -52,6 +52,7 @@ $required = array(
     'Request/Subscription',
     'Request/SubscriptionCancellation',
     'Request/SubscriptionInfo',
+    'Request/SubscriptionRebill',
     'Request/Void',
     'Utils',
 );
