@@ -80,6 +80,66 @@ class Syspay_Merchant_Entity_Payment extends Syspay_Merchant_Entity
     const FAILURE_UNSUPPORTED        = 'unsupported';
 
     /**
+     * Oneshot payment type
+     */
+    const TYPE_ONESHOT                         = 'ONESHOT';
+    
+    /**
+     * Initial billing agreement
+     */
+    const TYPE_BILLING_AGREEMENT_INITIAL       = 'BILLING_AGREEMENT_INITIAL';
+    
+    /**
+     * Rebill on a billing agreement
+     */
+    const TYPE_BILLING_AGREEMENT_REBILL        = 'BILLING_AGREEMENT_REBILL';
+    
+    /**
+     * Trial
+     */
+    const TYPE_SUBSCRIPTION_TRIAL              = 'SUBSCIRPTION_TRIAL';
+    
+    /**
+     * First not trial payment
+     */
+    const TYPE_SUBSCRIPTION_INITIAL            = 'SUBSCIRPTION_INITIAL';
+    
+    /**
+     * Rebill
+     */
+    const TYPE_SUBSCRIPTION_REBILL             = 'SUBSCIRPTION_REBILL';
+    
+    /**
+     * Oneshot retry
+     */
+    const TYPE_ONESHOT_RETRY                   = 'ONESHOT_RETRY';
+    
+    /**
+     * Initial billing agreement retry
+     */
+    const TYPE_BILLING_AGREEMENT_INITIAL_RETRY = 'BILLING_AGREEMENT_INITIAL_RETRY';
+    
+    /**
+     * Rebill retry on a billing agreement
+     */
+    const TYPE_BILLING_AGREEMENT_REBILL_RETRY  = 'BILLING_AGREEMENT_REBILL_RETRY';
+    
+    /**
+     * Trial retry
+     */
+    const TYPE_SUBSCRIPTION_TRIAL_RETRY        = 'SUBSCIRPTION_TRIAL_RETRY';
+    
+    /**
+     * First not trial payment retry
+     */
+    const TYPE_SUBSCRIPTION_INITIAL_RETRY      = 'SUBSCIRPTION_INITIAL_RETRY';
+    
+    /**
+     * Rebill retry
+     */
+    const TYPE_SUBSCRIPTION_REBILL_RETRY       = 'SUBSCIRPTION_REBILL_RETRY';
+    
+    /**
      * @var integer
      */
     private $id;
